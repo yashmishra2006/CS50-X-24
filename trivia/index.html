@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                console.log("DOM fully loaded and parsed");});
+
+                function checkanswer(button){
+                var ans = button.getAttribute('data')
+                var response = document.getElementById('response')
+
+                if (ans==="Green"){
+                    button.style.backgroundColor = 'green';
+                    response.innerHTML = 'Corect';
+                    response.style.color = 'green';
+                }
+                else{
+                    button.style.backgroundColor = 'red';
+                    response.innerHTML = 'Incorrect';
+                    response.style.color = 'red';
+                }
+                }
+
+                function checkFreeResponse(event) {
+
+                // Get the element which triggered the event
+                let button = event.target;
+
+                // Get the input element corresponding to the button
+                let input = button.parentElement.querySelector('input');
+
+                // Check for correct answer
+                if (input.value === '29') {
+                    input.style.backgroundColor = 'Green';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else {
+                    input.style.backgroundColor = 'Red';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital of India?</h3>
+                <button type="button" data='Green' onclick='checkanswer(this)'>New Delhi</button>
+                <button type="button" data='red1' onclick="checkanswer(this)">Chennai</button>
+                <button type="button" data='red2' onclick="checkanswer(this)">Bengaluru</button>
+                <div id='response'></div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>How many states are there in India?</h3>
+                <form>
+                    <input type="text" autofocus placeholder="Capital">
+                    <button onclick='checkFreeResponse(event)'>Submit</button>
+                    <button></button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+The average enery for the person is - 0.659
+
+The average valence for the person is - 0.484
+
+The average danceability for the person is - 0.716
+
+CONCLUSION
+
+From this data we can conclude the aura of the person is Purple.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+The problem as to why this my not be an accurate represantation of the person as a whole would be because music choice would be affected by life situation that happened in the previous year and might not reflect the actual aura of the person as a whole.
